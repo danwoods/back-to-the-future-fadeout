@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    background-image: url("/src/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .frb-message {
+    position: relative;
+    clear: both;
+    margin-bottom: 12px;
+    padding: 10px 18px;
+    background-color: #2e5cb8;
+    color: #fff;
+    border-radius: 1.5em;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .fade-out {
+    animation-duration: 3.5s;
+    animation-name: fadeOut;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      animation-play-state: paused;
+    }
+  }
+  
