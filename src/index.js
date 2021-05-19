@@ -1,20 +1,26 @@
-const textElm = document.getElementById("text");
+var textElm = document.getElementById("text");
 
-const textArr = textElm.innerHTML.split(" ");
+var textArr = textElm.innerHTML.split(" ");
 
-const newText = textArr
-  .map(
-    (t) =>
-      `<span class="fade-out" style="animation-delay: ${
-        Math.random() * 2.5
-      }s">${t} </span>`
-  )
-  .join("");
+// var newText = textArr
+//   .map(
+//     function(t){
+//       return '<span class="fade-out" style="animation-delay: '+ Math.random() * 2.5 + 's">' + t + ' </span>'
+//     }
+//   )
+//   .join("");
 
-textElm.innerHTML = newText;
+var newTextArr = []
+console.log(textArr, textArr.length)
+for (var i = 0; i < textArr.length; i++) {
+  console.log(textArr[i])
+  newTextArr.push('<span class="fade-out" style="animation-delay: ' + Math.random() * 2.5 + 's">' + textArr[i] + ' </span>')
+}
+
+textElm.innerHTML = newTextArr.join("");
 
 setTimeout(() => {
-  let span = document.createElement("span");
+  var span = document.createElement("span");
   span.style.position = "absolute";
   span.style.bottom = "35%";
   span.style["margin-left"] = "auto";
