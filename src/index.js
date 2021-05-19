@@ -50,7 +50,6 @@ function createButton (){
   var button = document.createElement("button");
 
   button.textContent = "Donate Now";
-  button.style.display = "table-cell";
   button.style["vertical-align"] = "middle";
   button.style.height = "20px";
   button.style.color = "#36c";
