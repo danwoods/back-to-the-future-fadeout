@@ -1,36 +1,85 @@
 body {
-    background-image: url("/src/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: sans-serif;
-    overflow: hidden;
+  background-image: url("/src/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.frb-message {
+  background-color: #2e5cb8;
+  border-radius: 1.5em;
+  clear: both;
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.5294117647;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  position: relative;
+}
+
+.fade-out {
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
   }
-  
-  .frb-message {
-    background-color: #2e5cb8;
-    border-radius: 1.5em;
-    clear: both;
-    color: #fff;
-    font-size: 17px;
-    line-height: 1.5294117647;
-    margin-bottom: 12px;
-    padding: 12px 20px;
-    position: relative;
+  to {
+    animation-play-state: paused;
+    opacity: 0;
+    visibility: hidden;
   }
-  
-  .fade-out {
-    animation-duration: 3.5s;
-    animation-fill-mode: forwards;
-    animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    visibility: hidden;
   }
-  
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-      animation-play-state: paused;
-    }
+  to {
+    animation-play-state: paused;
+    opacity: 1;
+    visibility: visible;
   }
-  
+}
+
+/* For css.html */
+
+.cta {
+  animation-delay: 4375ms;
+  animation-fill-mode: forwards;
+  animation-name: fadeIn;
+  bottom: 24%;
+  font-weight: bold;
+  left: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+/* Groupings */
+
+[class*="fade-out-group"] {
+  animation-duration: 1.5s;
+}
+
+.fade-out-group-1 {
+  animation-delay: 1250ms;
+}
+
+.fade-out-group-2 {
+  animation-delay: 2000ms;
+}
+
+.fade-out-group-3 {
+  animation-delay: 2750ms;
+}
