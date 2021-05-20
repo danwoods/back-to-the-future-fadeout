@@ -12,6 +12,7 @@ body {
   clear: both;
   color: #fff;
   font-size: 17px;
+  min-height: 78px;
   line-height: 1.5294117647;
   margin-bottom: 12px;
   padding: 12px 20px;
@@ -82,4 +83,14 @@ body {
 
 .fade-out-group-3 {
   animation-delay: 2750ms;
+}
+
+/** For image.html */
+
+svg {
+  position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
