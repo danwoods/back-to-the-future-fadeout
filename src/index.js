@@ -30,16 +30,8 @@ textElm.innerHTML = newTextArr.join("");
 function createContainerAside() {
   var aside = document.createElement("aside");
 
-  aside.style.position = "absolute";
-
-  aside.style.bottom = "24%";
-  aside.style["margin-left"] = "auto";
-  aside.style["margin-right"] = "auto";
-  aside.style.left = 0;
-  aside.style.right = 0;
-  aside.style["text-align"] = "center";
-  aside.style["font-weight"] = "bold";
-  aside.style["text-transform"] = "capitalize";
+  aside.setAttribute("class", "cta");
+  aside.setAttribute("style", "animation-delay: 550ms");
 
   return aside;
 }
@@ -64,17 +56,6 @@ function createButton() {
   var button = document.createElement("button");
 
   button.textContent = "Donate Now";
-  button.style["vertical-align"] = "middle";
-  button.style.height = "20px";
-  button.style.color = "#36c";
-  button.style["background-color"] = "#f8f9fa";
-  button.style["border-radius"] = "10px";
-  button.style.border = "1px solid #a2a9b1";
-  button.style["text-align"] = "center";
-  button.style.cursor = "pointer";
-  button.style.transition = "all 0.2s ease";
-  button.style["font-weight"] = "bold";
-  button.style["margin-top"] = "4px";
 
   return button;
 }

@@ -1,29 +1,4 @@
-body {
-  background-image: url("/src/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: sans-serif;
-  overflow: hidden;
-}
-
-.frb-message {
-  background-color: #2e5cb8;
-  border-radius: 1.5em;
-  clear: both;
-  color: #fff;
-  font-size: 17px;
-  min-height: 78px;
-  line-height: 1.5294117647;
-  margin-bottom: 12px;
-  padding: 12px 20px;
-  position: relative;
-}
-
-.fade-out {
-  animation-duration: 3.5s;
-  animation-fill-mode: forwards;
-  animation-name: fadeOut;
-}
+/* Animations */
 
 @keyframes fadeOut {
   from {
@@ -47,6 +22,39 @@ body {
     opacity: 1;
     visibility: visible;
   }
+}
+
+/*  */
+
+body {
+  background-image: url("/src/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+/* Styles from existing banners */
+
+.frb-message {
+  background-color: #2e5cb8;
+  border-radius: 1.5em;
+  clear: both;
+  color: #fff;
+  font-size: 17px;
+  min-height: 78px;
+  line-height: 1.5294117647;
+  margin-bottom: 12px;
+  padding: 12px 20px;
+  position: relative;
+}
+
+/* Global */
+
+.fade-out {
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+  animation-name: fadeOut;
 }
 
 /* For css and image html */
