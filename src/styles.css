@@ -24,7 +24,7 @@
   }
 }
 
-/*  */
+/* Background image */
 
 body {
   background-image: url("/src/background.png");
@@ -74,6 +74,8 @@ body {
   right: 0px;
   text-align: center;
   text-transform: capitalize;
+  top: 44%;
+  transform: translateY(-50%);
 }
 
 /* Groupings */
