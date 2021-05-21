@@ -49,10 +49,11 @@ body {
   }
 }
 
-/* For css.html */
+/* For css and image html */
 
 .cta {
   animation-delay: 4375ms;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-name: fadeIn;
   bottom: 24%;
@@ -78,7 +79,7 @@ body {
 }
 
 .fade-out-group-2 {
-  animation-delay: 2000ms;
+  animation-delay: 2100ms;
 }
 
 .fade-out-group-3 {
