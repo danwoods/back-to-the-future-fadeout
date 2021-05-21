@@ -24,24 +24,24 @@ for (var i = 0; i < textArr.length; i++) {
 textElm.innerHTML = newTextArr.join("");
 
 /**
- * Create div to hold text and button
- * @returns {HTMLDivElement} Newly created and styled div
+ * Create aside to hold text and button
+ * @returns {HTMLAsideElement} Newly created and styled aside
  */
-function createContainerDiv() {
-  var div = document.createElement("div");
+function createContainerAside() {
+  var aside = document.createElement("aside");
 
-  div.style.position = "absolute";
+  aside.style.position = "absolute";
 
-  div.style.bottom = "24%";
-  div.style["margin-left"] = "auto";
-  div.style["margin-right"] = "auto";
-  div.style.left = 0;
-  div.style.right = 0;
-  div.style["text-align"] = "center";
-  div.style["font-weight"] = "bold";
-  div.style["text-transform"] = "capitalize";
+  aside.style.bottom = "24%";
+  aside.style["margin-left"] = "auto";
+  aside.style["margin-right"] = "auto";
+  aside.style.left = 0;
+  aside.style.right = 0;
+  aside.style["text-align"] = "center";
+  aside.style["font-weight"] = "bold";
+  aside.style["text-transform"] = "capitalize";
 
-  return div;
+  return aside;
 }
 
 /**
@@ -79,12 +79,13 @@ function createButton() {
   return button;
 }
 
+// Set timeout for CTA so that it happens after everything is faded out
 setTimeout(function showCTA() {
-  var div = createContainerDiv();
+  var aside = createContainerAside();
   var text = createTextDiv();
   var button = createButton();
 
-  div.appendChild(text);
-  div.appendChild(button);
-  textElm.appendChild(div);
+  aside.appendChild(text);
+  aside.appendChild(button);
+  textElm.appendChild(aside);
 }, 5250);
