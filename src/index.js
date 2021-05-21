@@ -1,5 +1,11 @@
 /** @file Fade-out effect for text */
 
+/* Determine if the user has asked for reduced motion */
+var prefersReducedMotion =
+  window.matchMedia &&
+  window.matchMedia("(prefers-reduced-motion: reduce)") &&
+  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
 /** Element containing text we want to fade */
 var textElm = document.getElementById("text");
 
@@ -13,7 +19,7 @@ var newTextArr = [];
 for (var i = 0; i < textArr.length; i++) {
   newTextArr.push(
     '<span class="fade-out" style="animation-delay: ' +
-      Math.random() * 2.5 +
+      (prefersReducedMotion ? 1.5 : Math.random() * 2.5) +
       's">' +
       textArr[i] +
       " </span>"
