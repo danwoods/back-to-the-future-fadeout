@@ -8,4 +8,6 @@ This is a sample project for Wikimedia, showcasing a fade-out-technique.
 * Once files are being served, the routes of interest are `/`, `/css.html`, and `/image.html`
 
 ### Misc
-This project is currently hosted on Vercel, https://vercel.com/danwoods/wikimedia
+This project is currently hosted on Vercel  
+* Dashboard - https://vercel.com/danwoods/wikimedia
+* Live - https://wikimedia.vercel.app/
