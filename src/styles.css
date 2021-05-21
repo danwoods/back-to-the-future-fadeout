@@ -42,7 +42,7 @@ body {
   clear: both;
   color: #fff;
   font-size: 17px;
-  min-height: 78px;
+  min-height: 84px;
   line-height: 1.5294117647;
   margin-bottom: 12px;
   padding: 12px 20px;
@@ -56,8 +56,6 @@ body {
   animation-fill-mode: forwards;
   animation-name: fadeOut;
 }
-
-/* For css and image html */
 
 .cta {
   animation-delay: 4375ms;
@@ -74,8 +72,26 @@ body {
   right: 0px;
   text-align: center;
   text-transform: capitalize;
-  top: 44%;
+  top: 40%;
   transform: translateY(-50%);
+}
+
+.cta button {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #a2a9b1;
+  color: #36c;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-weight: bold;
+  height: 32px;
+  line-height: 17px;
+  margin-top: 5px;
+  padding: 0 12px;
+  text-align: center;
+  transition: all 0.2s ease;
+  vertical-align: middle;
 }
 
 /* Groupings */
@@ -94,6 +110,20 @@ body {
 
 .fade-out-group-3 {
   animation-delay: 2750ms;
+}
+
+/* Reduce motion if user request it */
+
+@media (prefers-reduced-motion) {
+  .cta {
+    animation-delay: 3s;
+    animation-duration: 2s;
+  }
+
+  [class*="fade-out-group"] {
+    animation-delay: 500ms;
+    animation-duration: 2.5s;
+  }
 }
 
 /** For image.html */
